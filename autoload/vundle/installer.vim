@@ -407,7 +407,7 @@ func! s:make_sync_command(bang, bundle) abort
 
     let cmd_parts = [
                 \ 'cd '.vundle#installer#shellesc(a:bundle.path()),
-                \ 'git pull',
+                \ 'git pull origin master',
                 \ 'git submodule update --init --recursive',
                 \ ]
     let cmd = join(cmd_parts, ' && ')
